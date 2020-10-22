@@ -1,0 +1,231 @@
+[naveen.dasaprakash@cloud.dnc.gov.sg@pdt-app-org-01 dist]$ sudo ./runClient.sh
+java JDK : /usr/local/jdk1.8.0_241/bin
+java -jar -DconfigPath=./config/gwsxdemo-consumer-config.properties gwsx-uen-1.0.0.jar
+Please enter Gwsx Demo Client Running Mode: 1
+        1: Invoke GwsxDemoLCxfService Endpoint
+1
+Please enter Service request string:
+201724419Z
+enabling mutual SSL connection - start
+enabling mutual SSL connection - end
+Oct 21, 2020 2:46:40 PM sg.gov.uen.ws.clients.UENServiceConsumerMain main
+INFO: Invoking GwsxDemoCxfService via Endpoint!
+Oct 21, 2020 2:46:40 PM sg.gov.uen.ws.clients.UENServiceConsumerMain invokeCxfServiceViaEndpoint
+INFO: Invoking Cxf Service @ https://edh.e.api.gov.sg/v1/UENGwsxWebServices/UEN_SEARCH_WS
+Oct 21, 2020 2:46:40 PM sg.gov.uen.ws.clients.UENServiceConsumerMain invokeCxfServiceViaEndpoint
+INFO: Invoking Cxf Service Properties@ clientkeystore.properties
+Oct 21, 2020 2:46:41 PM org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+INFO: Creating Service {http://search.ws.uen.com/}UENSEARCHWSService from class com.uen.ws.search.UENSEARCHWS
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Oct 21, 2020 2:46:42 PM org.apache.cxf.services.UENSEARCHWSService.UEN_SEARCH_WSPort.UEN_SEARCH_WS
+INFO: Outbound Message
+---------------------------
+ID: 1
+Address: https://edh.e.api.gov.sg/v1/UENGwsxWebServices/UEN_SEARCH_WS
+Encoding: UTF-8
+Http-Method: POST
+Content-Type: text/xml
+Headers: {Accept=[*/*], SOAPAction=[""]}
+Payload: <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" soap:mustUnderstand="1">
+      <wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-4be3e2cb-edcb-4152-b438-2bb6d3e06990">MIIFTTCCBDWgAwIBAgIRAIiuwgbGKbZ0AAAAAFEBCYAwDQYJKoZIhvcNAQELBQAwgboxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1FbnRydXN0LCBJbmMuMSgwJgYDVQQLEx9TZWUgd3d3LmVudHJ1c3QubmV0L2xlZ2FsLXRlcm1zMTkwNwYDVQQLEzAoYykgMjAxMiBFbnRydXN0LCBJbmMuIC0gZm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxLjAsBgNVBAMTJUVudHJ1c3QgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkgLSBMMUswHhcNMjAwMzIwMDczNDAzWhcNMjEwMzE5MDgwNDAxWjB0MQswCQYDVQQGEwJTRzESMBAGA1UEBxMJU2luZ2Fwb3JlMTgwNgYDVQQKEy9JbmZvLWNvbW11bmljYXRpb25zIE1lZGlhIERldmVsb3BtZW50IEF1dGhvcml0eTEXMBUGA1UEAxMOd3d3LmRuYy5nb3Yuc2cwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCkJNkq+ujd+Sa5R8B+BMOUTStQu1zkoAWeu1mst0zxwv2b+TdbmdDSyAtxuQ86t7aoe2zuELw4CU0+poRX2CUPoG5gmxo7ZV9zu4DNfgReXboPjcaM402SqXLjtRZJCHoJeKYnPnExVWzVnoyIq43wvNMBrDI2REqPL1hN8omCah1UVmq4AskEovYVuIBxxiKQZIUHos0I2kNwZaG3XBtqB3vQdSDco/CGRtf+kY4U2Vt07cAvNH1xhjC+7wS8fB3P5SaLm3vc5zUhIRDkSMdhGgITs1vaxACtYIs9h29MXbyKBFGi4cw56kztgjX3s5D4yYoN6X7TwJUdRqbkOO0zAgMBAAGjggGRMIIBjTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMDMGA1UdHwQsMCowKKAmoCSGImh0dHA6Ly9jcmwuZW50cnVzdC5uZXQvbGV2ZWwxay5jcmwwSwYDVR0gBEQwQjA2BgpghkgBhvpsCgEFMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly93d3cuZW50cnVzdC5uZXQvcnBhMAgGBmeBDAECAjBoBggrBgEFBQcBAQRcMFowIwYIKwYBBQUHMAGGF2h0dHA6Ly9vY3NwLmVudHJ1c3QubmV0MDMGCCsGAQUFBzAChidodHRwOi8vYWlhLmVudHJ1c3QubmV0L2wxay1jaGFpbjI1Ni5jZXIwJQYDVR0RBB4wHIIOd3d3LmRuYy5nb3Yuc2eCCmRuYy5nb3Yuc2cwHwYDVR0jBBgwFoAUgqJwdN28Uz/Pe9T3zX+nYMYKTL8wHQYDVR0OBBYEFBzlpPTI9iaNakCFxZJ5wuDlD/70MAkGA1UdEwQCMAAwDQYJKoZIhvcNAQELBQADggEBABt/fzfxZ6RLS80RD2edWCkrmeSzQmpPzcsNAQOCIB3mV9T3oR0qneRanHpXWzPdzg0qcSXQkyzgsVncgRlgWXx2+4g6u0+fqzZQu2PulmburwcgHjdLGUwbplu86ibfCmttQ+ociSK/6SbgTcKgAlaDr3Z2HCBsMyCnzFXjogRqz3Sn+9WetVG4B/LguGMLDJw0LkA2+53KSvQ5Eg90S0lP8c7eCUyOZpQgyf/5KZOXMxH/zKsAn09+IkNCQ2kmneBakDvR9QALQJNhJjEkLLEWeU5DMy4CS1LSOhpT8XqAsN3pR75uHTelmXwMK3WChL+MdfIRiDWwaP9ZbIuM4/Q=</wsse:BinarySecurityToken>
+      <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="SIG-ed10e8b6-ab48-4665-9991-abda1d4a7d4b">
+        <ds:SignedInfo>
+          <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+            <ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="soap"/>
+          </ds:CanonicalizationMethod>
+          <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+          <ds:Reference URI="#id-5747e15d-6777-4033-ad34-2d3d660630d7">
+            <ds:Transforms>
+              <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            </ds:Transforms>
+            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <ds:DigestValue>wb36zbfBc7/xqV7662+02EasrOhCij/tXL6Q1heJ9PM=</ds:DigestValue>
+          </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>MyZaShAjDhY1hhck4f7f598aJlTIl6aDezy4erG0ocWS6t8BfDICPBZDexEo4dkOHKHiQylAJ8kGppzn5DS+Ms72rYyeFZ/Qau6QT4fUEHJTEcnAqCYrDuOM+r/I1cQtVUxt28jQfWL+O1JI1INvZI0llrKTy6Qb0gsWNZeiNtu78vXJIDdRXOupYkuRfXVkPoygpZQtixsl7arEgD8o31CrKKYtS0i/klNSUWKU/Of8qwk7cmscDwyKcfyBQUxr1TMXZYBAkdCJ+D+Qv9I2xwD+/cCqTrNrbIIVrYPp6droDgBKPaKlx1QKvj/IgPAbd+NQ9LxWZ7QLtWbViWQRdg==</ds:SignatureValue>
+        <ds:KeyInfo Id="KI-9254d900-73ab-4da9-bca3-2a5e35d7d073">
+          <wsse:SecurityTokenReference xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="STR-a10cdc32-1aff-47e6-9f96-90e7931e81af">
+            <wsse:Reference URI="#X509-4be3e2cb-edcb-4152-b438-2bb6d3e06990" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+          </wsse:SecurityTokenReference>
+        </ds:KeyInfo>
+      </ds:Signature>
+    </wsse:Security>
+  </soap:Header>
+  <soap:Body xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="id-5747e15d-6777-4033-ad34-2d3d660630d7">
+    <ns2:searchResult xmlns:ns2="http://search.ws.uen.com/">
+      <arg0>
+        <UEN_REQUEST>
+          <BODY>
+            <REQUEST_DATA>
+              <REQ_RESULT_GROUP>
+                <GROUP_INFO>2|||4|||5</GROUP_INFO>
+                <VIEW_CHARGEABLE_INFO>N</VIEW_CHARGEABLE_INFO>
+              </REQ_RESULT_GROUP>
+              <SEARCH_CRITERIA>
+                <UEN>201724419Z</UEN>
+              </SEARCH_CRITERIA>
+            </REQUEST_DATA>
+          </BODY>
+          <HEADER_INPUT>
+            <REQUEST_COUNT>1</REQUEST_COUNT>
+          </HEADER_INPUT>
+        </UEN_REQUEST>
+      </arg0>
+    </ns2:searchResult>
+  </soap:Body>
+</soap:Envelope>
+
+--------------------------------------
+Oct 21, 2020 2:46:42 PM org.apache.cxf.services.UENSEARCHWSService.UEN_SEARCH_WSPort.UEN_SEARCH_WS
+INFO: Inbound Message
+----------------------------
+ID: 1
+Response-Code: 200
+Encoding: UTF-8
+Content-Type: text/xml;charset=UTF-8
+Headers: {content-type=[text/xml;charset=UTF-8], Date=[Wed, 21 Oct 2020 06:46:42 GMT], Set-Cookie=[TS011faa48=01a9c82bc427b01849982bf2934b31265f6210d53de328a9a393977d6156d8886354b077f5c4138e989a1feecae89501b887e37560cc3675ebe5d7ba5a1457ad73f8592aef; Path=/, JSESSIONID=Iu1J6OycU8Nlh4ZTwpmubE9d3NlM9aQvk5mYcYzK9QRgoOI4d_2U!-34578504;path=/;HttpOnly], transfer-encoding=[chunked], X-ORACLE-DMS-ECID=[abd5a78f7739e22f:-44b636d:175149e0fb0:-8000-00000000000ad6ee]}
+Payload: <S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+  <S:Header>
+    <gwsxns:GWSXHeader xmlns:gwsxns="http://www.gwsx.gov.sg/gwsx/response/audit">
+      <gwsxns:ProviderTxnID>PTXN-UEN-1603262803209</gwsxns:ProviderTxnID>
+      <gwsxns:ProviderTxnStatus>S</gwsxns:ProviderTxnStatus>
+    </gwsxns:GWSXHeader>
+  </S:Header>
+  <S:Body>
+    <ns2:searchResultResponse xmlns:ns2="http://search.ws.uen.com/">
+      <return>
+        <UEN_RESPONSE>
+          <BODY>
+            <RESPONSE_DATA>
+              <ACTIVITY_GROUP>
+                <ADD_PRIMARY_ACTIVITY_DESC/>
+                <ADD_SECONDARY_ACTIVITY_DESC/>
+                <PRIMARY_ACTIVITY_CODE>86201</PRIMARY_ACTIVITY_CODE>
+                <PRIMARY_ACTIVITY_DESC>CLINICS AND OTHER GENERAL MEDICAL SERVICES (WESTERN)</PRIMARY_ACTIVITY_DESC>
+                <SECONDARY_ACTIVITY_CODE/>
+                <SECONDARY_ACTIVITY_DESC/>
+              </ACTIVITY_GROUP>
+              <CHARGEABLE_GROUP>
+                <CHARGEABLE/>
+              </CHARGEABLE_GROUP>
+              <ENTITY_MAIN_INFORMATION>
+                <EMAIL_ADDR_AT_SIGN/>
+                <EMAIL_ADDR_DOMAIN/>
+                <EMAIL_ADDR_LOCAL_PART/>
+                <ENTITY_LONG_NAME/>
+                <ENTITY_NAME>TBTG AESTHETICS PTE. LTD.</ENTITY_NAME>
+                <ENTITY_STATUS_CODE>0</ENTITY_STATUS_CODE>
+                <ENTITY_STATUS_CODE_DESC>Live Company</ENTITY_STATUS_CODE_DESC>
+                <ENTITY_TYPE>LC</ENTITY_TYPE>
+                <FAX_NO/>
+                <FAX_NO_CTRY_CODE/>
+                <FAX_NO_INT_PREFIX/>
+                <ISSUANCE_AGENCY_ID>ACRA</ISSUANCE_AGENCY_ID>
+                <RELATED_MAIN_ENTITY_UEN_1/>
+                <RELATED_MAIN_ENTITY_UEN_2/>
+                <RELATED_MAIN_ENTITY_UEN_3/>
+                <TEL_NO/>
+                <TEL_NO_AREA_CODE/>
+                <TEL_NO_CTRY_CODE/>
+                <TEL_NO_INT_PREFIX/>
+                <UEN>201724419Z</UEN>
+                <UEN_ISSUE_DATE>2017-08-28</UEN_ISSUE_DATE>
+                <UEN_STATUS>R</UEN_STATUS>
+              </ENTITY_MAIN_INFORMATION>
+              <REG_ADDR_GROUP>
+                <REG_ADDRESS_STANDARD>D</REG_ADDRESS_STANDARD>
+                <REG_ADDRESS_TYPE/>
+                <REG_ADD_EFFECTIVE_DATE/>
+                <REG_BUILDING_NAME/>
+                <REG_CO_INDICATOR>Y</REG_CO_INDICATOR>
+                <REG_CO_NAME_LINE1/>
+                <REG_CO_NAME_LINE2/>
+                <REG_CO_NAME_LINE3/>
+                <REG_HOUSE_BLOCK>53</REG_HOUSE_BLOCK>
+                <REG_LEVEL>02</REG_LEVEL>
+                <REG_OTHER_ADDRESS_LINE1/>
+                <REG_OTHER_ADDRESS_LINE2/>
+                <REG_POSTAL_CODE>078992</REG_POSTAL_CODE>
+                <REG_STREET_NAME>TRAS STREET</REG_STREET_NAME>
+                <REG_UNIT>01</REG_UNIT>
+              </REG_ADDR_GROUP>
+              <RESPONSE_UEN_GROUP>
+                <UEN>201724419Z</UEN>
+              </RESPONSE_UEN_GROUP>
+            </RESPONSE_DATA>
+          </BODY>
+          <HEADER_OUTPUT>
+            <MESSAGE>Successful</MESSAGE>
+            <RECORD_COUNT>1</RECORD_COUNT>
+            <STATUS>10000</STATUS>
+          </HEADER_OUTPUT>
+        </UEN_RESPONSE>
+      </return>
+    </ns2:searchResultResponse>
+  </S:Body>
+</S:Envelope>
+
+--------------------------------------
+Oct 21, 2020 2:46:42 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+WARNING: Interceptor for {http://search.ws.uen.com/}UENSEARCHWSService#{http://search.ws.uen.com/}searchResult has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Unmarshalling Error: unexpected element (uri:"", local:"TEL_NO_AREA_CODE"). Expected elements are <{}TEL_NO>,<{}ENTITY_LONG_NAME>,<{}FAX_NO_INT_PREFIX>,<{}EMAIL_ADDR_DOMAIN>,<{}TEL_NO_CTRY_CODE>,<{}ENTITY_STATUS_CODE_DESC>,<{}ENTITY_TYPE>,<{}ENTITY_STATUS_CODE>,<{}FAX_NO>,<{}UEN_STATUS>,<{}UEN_ISSUE_DATE>,<{}FAX_NO_CTRY_CODE>,<{}RELATED_MAIN_ENTITY_UEN_1>,<{}ISSUANCE_AGENCY_ID>,<{}EMAIL_ADDR_LOCAL_PART>,<{}RELATED_MAIN_ENTITY_UEN_2>,<{}RELATED_MAIN_ENTITY_UEN_3>,<{}TEL_NO_INT_PREFIX>,<{}UEN>,<{}ENTITY_NAME>,<{}EMAIL_ADDR_AT_SIGN>
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.unmarshall(JAXBEncoderDecoder.java:908)
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.unmarshall(JAXBEncoderDecoder.java:714)
+        at org.apache.cxf.jaxb.io.DataReaderImpl.read(DataReaderImpl.java:179)
+        at org.apache.cxf.wsdl.interceptors.DocLiteralInInterceptor.handleMessage(DocLiteralInInterceptor.java:109)
+        at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+        at org.apache.cxf.endpoint.ClientImpl.onMessage(ClientImpl.java:805)
+        at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleResponseInternal(HTTPConduit.java:1684)
+        at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleResponse(HTTPConduit.java:1560)
+        at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1361)
+        at org.apache.cxf.io.CacheAndWriteOutputStream.postClose(CacheAndWriteOutputStream.java:56)
+        at org.apache.cxf.io.CachedOutputStream.close(CachedOutputStream.java:216)
+        at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+        at org.apache.cxf.transport.http.HTTPConduit.close(HTTPConduit.java:658)
+        at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:62)
+        at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+        at org.apache.cxf.endpoint.ClientImpl.doInvoke(ClientImpl.java:518)
+        at org.apache.cxf.endpoint.ClientImpl.invoke(ClientImpl.java:427)
+        at org.apache.cxf.endpoint.ClientImpl.invoke(ClientImpl.java:328)
+        at org.apache.cxf.endpoint.ClientImpl.invoke(ClientImpl.java:281)
+        at org.apache.cxf.frontend.ClientProxy.invokeSync(ClientProxy.java:96)
+        at org.apache.cxf.jaxws.JaxWsClientProxy.invoke(JaxWsClientProxy.java:139)
+        at com.sun.proxy.$Proxy34.searchResult(Unknown Source)
+        at sg.gov.uen.ws.clients.UENServiceConsumerClient.invokeGwsxDemoCxfService(UENServiceConsumerClient.java:107)
+        at sg.gov.uen.ws.clients.UENServiceConsumerMain.invokeCxfServiceViaEndpoint(UENServiceConsumerMain.java:47)
+        at sg.gov.uen.ws.clients.UENServiceConsumerMain.main(UENServiceConsumerMain.java:32)
+Caused by: javax.xml.bind.UnmarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXParseException2; lineNumber: 1; columnNumber: 1244; unexpected element (uri:"", local:"TEL_NO_AREA_CODE"). Expected elements are <{}TEL_NO>,<{}ENTITY_LONG_NAME>,<{}FAX_NO_INT_PREFIX>,<{}EMAIL_ADDR_DOMAIN>,<{}TEL_NO_CTRY_CODE>,<{}ENTITY_STATUS_CODE_DESC>,<{}ENTITY_TYPE>,<{}ENTITY_STATUS_CODE>,<{}FAX_NO>,<{}UEN_STATUS>,<{}UEN_ISSUE_DATE>,<{}FAX_NO_CTRY_CODE>,<{}RELATED_MAIN_ENTITY_UEN_1>,<{}ISSUANCE_AGENCY_ID>,<{}EMAIL_ADDR_LOCAL_PART>,<{}RELATED_MAIN_ENTITY_UEN_2>,<{}RELATED_MAIN_ENTITY_UEN_3>,<{}TEL_NO_INT_PREFIX>,<{}UEN>,<{}ENTITY_NAME>,<{}EMAIL_ADDR_AT_SIGN>]
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.handleStreamException(UnmarshallerImpl.java:468)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:402)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal(UnmarshallerImpl.java:379)
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.doUnmarshal(JAXBEncoderDecoder.java:857)
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.access$100(JAXBEncoderDecoder.java:102)
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder$2.run(JAXBEncoderDecoder.java:896)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at org.apache.cxf.jaxb.JAXBEncoderDecoder.unmarshall(JAXBEncoderDecoder.java:894)
+        ... 24 more
+Caused by: com.sun.istack.internal.SAXParseException2; lineNumber: 1; columnNumber: 1244; unexpected element (uri:"", local:"TEL_NO_AREA_CODE"). Expected elements are <{}TEL_NO>,<{}ENTITY_LONG_NAME>,<{}FAX_NO_INT_PREFIX>,<{}EMAIL_ADDR_DOMAIN>,<{}TEL_NO_CTRY_CODE>,<{}ENTITY_STATUS_CODE_DESC>,<{}ENTITY_TYPE>,<{}ENTITY_STATUS_CODE>,<{}FAX_NO>,<{}UEN_STATUS>,<{}UEN_ISSUE_DATE>,<{}FAX_NO_CTRY_CODE>,<{}RELATED_MAIN_ENTITY_UEN_1>,<{}ISSUANCE_AGENCY_ID>,<{}EMAIL_ADDR_LOCAL_PART>,<{}RELATED_MAIN_ENTITY_UEN_2>,<{}RELATED_MAIN_ENTITY_UEN_3>,<{}TEL_NO_INT_PREFIX>,<{}UEN>,<{}ENTITY_NAME>,<{}EMAIL_ADDR_AT_SIGN>
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.handleEvent(UnmarshallingContext.java:726)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader.reportError(Loader.java:247)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader.reportError(Loader.java:242)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader.reportUnexpectedChildElement(Loader.java:109)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader.childElement(Loader.java:90)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.StructureLoader.childElement(StructureLoader.java:237)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext._startElement(UnmarshallingContext.java:556)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.startElement(UnmarshallingContext.java:538)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.StAXStreamConnector.handleStartElement(StAXStreamConnector.java:231)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.StAXStreamConnector.bridge(StAXStreamConnector.java:165)
+        at com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:400)
+        ... 30 more
+Caused by: javax.xml.bind.UnmarshalException: unexpected element (uri:"", local:"TEL_NO_AREA_CODE"). Expected elements are <{}TEL_NO>,<{}ENTITY_LONG_NAME>,<{}FAX_NO_INT_PREFIX>,<{}EMAIL_ADDR_DOMAIN>,<{}TEL_NO_CTRY_CODE>,<{}ENTITY_STATUS_CODE_DESC>,<{}ENTITY_TYPE>,<{}ENTITY_STATUS_CODE>,<{}FAX_NO>,<{}UEN_STATUS>,<{}UEN_ISSUE_DATE>,<{}FAX_NO_CTRY_CODE>,<{}RELATED_MAIN_ENTITY_UEN_1>,<{}ISSUANCE_AGENCY_ID>,<{}EMAIL_ADDR_LOCAL_PART>,<{}RELATED_MAIN_ENTITY_UEN_2>,<{}RELATED_MAIN_ENTITY_UEN_3>,<{}TEL_NO_INT_PREFIX>,<{}UEN>,<{}ENTITY_NAME>,<{}EMAIL_ADDR_AT_SIGN>
+        ... 41 more
+
+Oct 21, 2020 2:46:42 PM sg.gov.uen.ws.clients.UENServiceConsumerClient invokeGwsxDemoCxfService
+INFO: javax.xml.ws.soap.SOAPFaultException: Unmarshalling Error: unexpected element (uri:"", local:"TEL_NO_AREA_CODE"). Expected elements are <{}TEL_NO>,<{}ENTITY_LONG_NAME>,<{}FAX_NO_INT_PREFIX>,<{}EMAIL_ADDR_DOMAIN>,<{}TEL_NO_CTRY_CODE>,<{}ENTITY_STATUS_CODE_DESC>,<{}ENTITY_TYPE>,<{}ENTITY_STATUS_CODE>,<{}FAX_NO>,<{}UEN_STATUS>,<{}UEN_ISSUE_DATE>,<{}FAX_NO_CTRY_CODE>,<{}RELATED_MAIN_ENTITY_UEN_1>,<{}ISSUANCE_AGENCY_ID>,<{}EMAIL_ADDR_LOCAL_PART>,<{}RELATED_MAIN_ENTITY_UEN_2>,<{}RELATED_MAIN_ENTITY_UEN_3>,<{}TEL_NO_INT_PREFIX>,<{}UEN>,<{}ENTITY_NAME>,<{}EMAIL_ADDR_AT_SIGN>
+[naveen.dasaprakash@cloud.dnc.gov.sg@pdt-app-org-01 dist]$
